@@ -1,0 +1,125 @@
+/*main{
+  width: var(--size);
+  height: var(--size);
+  --size: 60vmin;
+  margin: auto;
+  position: relative;
+  display: flex;
+  perspective: 100vmin;
+  --back: hsl(173 100% 50%);
+  --fore: hsl(var(--fore-hue)100% 50%);
+  --fore-hue: 343;
+
+  animation: colors 20000ms infinite;
+}
+ul{
+  position: absolute;
+  top:0;
+  left: 50%;
+  margin: auto;
+  list-style: none;
+  transform-origin: 50% 0%;
+}
+li{
+  --size: 1vmin;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--back);
+  margin-bottom: calc(var(--size) * 0.5);
+}
+body{
+  display: flex;
+  height: 100vh;
+  background: rgb(121, 117, 117);
+}
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+@property --fore-hue{
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 343;
+}
+@keyframes colors{
+  10%{--fore-hue: 343;}
+  30%{--fore-hue: 383;}
+  70%{--fore-hue: 213;}
+  90%,
+  100%{--fore-hue: 343;}
+}*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+  background-color: #17324f;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  justify-content: flex-end;
+  /*justify-content: space-between;*/
+  /*justify-content: space-around;*/
+}
+.star{
+  color: yellow;
+  font-size: 40px;
+  margin-top: 70px;
+  margin-bottom: 0;
+  text-shadow: 0 0 5px #f9f911, 0 0 10px #fafa5b, 0 0 20px #f9f911, 0 0 30px #fcfc2c, 0 0 40px #f9f911, 0 0 50px #f9f911;
+  /*animation: estrella 2s infinite;*/
+}
+/*@keyframes estrella {
+  0%{
+    text-shadow: 0 0 5px #f9f911, 0 0 10px #fafa5b, 0 0 20px #f9f911, 0 0 30px #fcfc2c, 0 0 40px #f9f911, 0 0 50px #f9f911;
+  }
+  100%{
+    text-shadow: 0 0 5px #f9f911, 0 0 10px #fafa5b, 0 0 20px #f9f911, 0 0 30px #fcfc2c, 0 0 40px #f9f911, 0 0 50px #f9f911;
+  }
+}*/
+pre{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #02d002;
+}
+/*pre span:first-child{
+  color: yellow;
+}*/
+pre span:last-child{
+  color: rgb(125, 41, 41);
+}
+.snow{
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -100px;
+}
+.snow-floor{
+  width: 100%;
+  height: 5%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.titleee{
+  color: #fff;
+  font-family: 'Lobster';
+  font-weight: lighter;
+}
+@keyframes fall{
+  0%{
+    top: -100px;
+  }
+  100%{
+    top: 100vh;
+  }
+}
